@@ -27,8 +27,11 @@ const Otp = () => {
         <div>
             <div >
                 <div className="flex flex-col md:flex-row h-screen">
+                <img src="./image/Group 1000005871.png" alt="" className='w-60  block md:hidden mx-auto' />
+               
                     <div className="w-full md:w-1/2 flex justify-center items-center p-4">
                         <form action="" className='shadow-lg rounded-lg p-10 w-full max-w-md'>
+                        <img src="./image/Group 1116602997 (1).png" alt="" className='mb-2 w-60 block md:hidden mx-auto' />
                             <h2 className="text-2xl font-bold mb-6">Enter Otp</h2>
                             <p>Please enter the 6-digit code that was sent to your phone number.</p>
 

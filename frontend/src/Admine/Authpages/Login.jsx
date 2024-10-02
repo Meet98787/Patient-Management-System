@@ -12,9 +12,11 @@ const AdminLogin = () => {
     return (
         <div >
             <div className="flex flex-col md:flex-row h-screen">
+            <img src="./image/Group 1000005871.png" alt="" className='w-60 mb-2 block md:hidden mx-auto' />
                 {/* Login Form */}
                 <div className="w-full md:w-1/2 flex justify-center items-center p-4">
                     <form action="" className='shadow-lg rounded-lg p-10 w-full max-w-md'>
+                    <img src="./image/Group 1116603022.png" alt="" className='mb-2 w-60 block md:hidden mx-auto' />
                         <h2 className="text-2xl font-bold mb-6">Login</h2>
                         <div className="mb-4">
                             <label htmlFor="registerEmail" className="block text-sm font-medium">Email address</label>

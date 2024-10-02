@@ -20,7 +20,10 @@ const Register = () => {
                 <div className="w-full md:w-1/2 p-4">
                     <div className='flex justify-center'>
                         <form action="" className='shadow-lg rounded-lg p-10 w-full max-w-xl'>
+                            <img src="./image/Group 1000005871.png" alt="" className='w-60 mb-2 block md:hidden mx-auto' />
                             <h2 className="text-2xl font-bold mb-6">Registration</h2>
+
+                            {/* First and Last Name */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                 <div>
                                     <label htmlFor="firstName" className="block text-sm font-medium">First Name</label>
@@ -32,6 +35,7 @@ const Register = () => {
                                 </div>
                             </div>
 
+                            {/* Email and Phone Number */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium">Email Address</label>
@@ -43,7 +47,8 @@ const Register = () => {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                            {/* Age, Height, Weight */}
+                            <div className="grid grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
                                 <div>
                                     <label htmlFor="age" className="block text-sm font-medium">Age</label>
                                     <input type="number" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="age" placeholder='Enter Age' />
@@ -56,9 +61,6 @@ const Register = () => {
                                     <label htmlFor="weight" className="block text-sm font-medium">Weight (kg)</label>
                                     <input type="number" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="weight" placeholder='Enter Weight' />
                                 </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                                 <div>
                                     <label htmlFor="gender" className="block text-sm font-medium">Gender</label>
                                     <select id="gender" className="mt-1 block w-full p-2 border border-gray-300 rounded-md">
@@ -86,9 +88,6 @@ const Register = () => {
                                     <label htmlFor="dob" className="block text-sm font-medium">Date of Birth</label>
                                     <input type="date" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="dob" />
                                 </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                                 <div>
                                     <label htmlFor="country" className="block text-sm font-medium">Country</label>
                                     <select id="country" className="mt-1 block w-full p-2 border border-gray-300 rounded-md">
@@ -107,33 +106,63 @@ const Register = () => {
                                         <option value="london">London</option>
                                     </select>
                                 </div>
-                                <div>
+                                <div className='w-full col-span-2 sm:col-span-1'>
                                     <label htmlFor="city" className="block text-sm font-medium">City</label>
                                     <input type="text" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="city" placeholder='Enter City' />
                                 </div>
                             </div>
 
-                            <div>
-                                <div className="mb-4">
-                                    <label htmlFor="registerEmail" className="block text-sm font-medium">Email address</label>
-                                    <input type="email" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="registerEmail" />
-                                </div>
-                                <div className="mb-4">
-                                    <label htmlFor="registerPassword" className="block text-sm font-medium">Password</label>
-                                    <input type="password" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="registerPassword" />
-                                </div>
-                                <div className="mb-4">
-                                    <label htmlFor="confirmPassword" className="block text-sm font-medium">Confirm Password</label>
-                                    <input type="password" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="confirmPassword" />
-                                </div>
-                                <div className="mb-4 flex items-center">
-                                    <input type="checkbox" className="mr-2 leading-tight" id="termsCheck" />
-                                    <label className="text-sm" htmlFor="termsCheck">I agree to all the <span className='text-blue-400'>T&C</span> and <span className='text-blue-400'>Privacy Policies</span></label>
+                            {/* Address and Password */}
+                            <div className="mb-4">
+                                <label htmlFor="address" className="block text-sm font-medium">Address</label>
+                                <input type="text" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="address" placeholder='Enter Address' />
+                            </div>
+                            {/* Password Field */}
+                            <div className="mb-4 relative">
+                                <label htmlFor="registerPassword" className="block text-sm font-medium">Password</label>
+                                <input
+                                    type={showPassword ? 'text' : 'password'}
+                                    className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                                    id="registerPassword"
+                                    placeholder='Enter Password'
+                                />
+                                <div
+                                    className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+                                    onClick={togglePasswordVisibility}
+                                >
+                                    {showPassword ? <FaEyeSlash className='mt-3'/> : <FaEye className='mt-3'/>}
                                 </div>
                             </div>
+
+                            {/* Confirm Password Field */}
+                            <div className="mb-4 relative">
+                                <label htmlFor="confirmPassword" className="block text-sm font-medium">Confirm Password</label>
+                                <input
+                                    type={showConfirmPassword ? 'text' : 'password'}
+                                    className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                                    id="confirmPassword"
+                                    placeholder='Confirm Password'
+                                />
+                                <div
+                                    className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+                                    onClick={toggleConfirmPasswordVisibility}
+                                >
+                                    {showConfirmPassword ? <FaEyeSlash className='mt-3'/> : <FaEye className='mt-3'/>}
+                                </div>
+                            </div>
+
+                            {/* Terms and Conditions */}
+                            <div className="mb-4 flex items-center">
+                                <input type="checkbox" className="mr-2 leading-tight" id="termsCheck" />
+                                <label className="text-sm" htmlFor="termsCheck">
+                                    I agree to all the <span className='text-blue-400'>T&C</span> and <span className='text-blue-400'>Privacy Policies</span>
+                                </label>
+                            </div>
+
                             <button type="submit" className='bg-gray-100 text-center w-full p-2 rounded-lg hover:bg-gray-200'>Register</button>
-                            <p className='text-center mt-2'>Already have an account ? <Link className='no-underline' to={'/login'}>Login</Link></p>
+                            <p className='text-center mt-2'>Already have an account? <Link className='no-underline' to={'/login'}>Login</Link></p>
                         </form>
+
                     </div>
                 </div>
 

@@ -5,9 +5,11 @@ const AdminForgotpassword = () => {
     return (
         <div >
             <div className="flex flex-col md:flex-row h-screen">
+                <img src="./image/Group 1000005871.png" alt="" className='w-60  block md:hidden mx-auto' />
                 {/* Login Form */}
                 <div className="w-full md:w-1/2 flex justify-center items-center p-4">
                     <form action="" className='shadow-lg rounded-lg p-10 w-full max-w-md'>
+                        <img src="./image/Group 1116602997 (1).png" alt="" className='mb-2 w-60 block md:hidden mx-auto' />
                         <h2 className="text-2xl font-bold mb-6">Forgot Password</h2>
                         <p>Enter your email and we'll send you a otp to reset your account</p>
                         <div className="mb-4">

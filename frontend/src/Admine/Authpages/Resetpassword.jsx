@@ -17,9 +17,11 @@ const AdminResetpassword = () => {
     return (
         <div>
         <div className="flex flex-col md:flex-row h-screen">
+        <img src="./image/Group 1000005871.png" alt="" className='w-60  block md:hidden mx-auto' />
             {/* Reset Password Form */}
             <div className="w-full md:w-1/2 flex justify-center items-center p-4">
                 <form  className='shadow-lg rounded-lg p-10 w-full max-w-md'>
+                <img src="./image/Group 1116602997 (1).png" alt="" className='mb-2 w-60 block md:hidden mx-auto' />
                     <h2 className="text-2xl font-bold mb-6">Reset Password</h2>
                     <div className="mb-4">
                         <label htmlFor="registerPassword" className="block text-sm font-medium">Password</label>
