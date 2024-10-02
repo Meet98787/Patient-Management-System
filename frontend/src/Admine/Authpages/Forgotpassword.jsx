@@ -14,7 +14,7 @@ const AdminForgotpassword = () => {
                             <label htmlFor="registerEmail" className="block text-sm font-medium">Email address</label>
                             <input type="email" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="registerEmail" placeholder="Enter your email" />
                         </div>
-                        
+
                         <button type="submit" className='bg-gray-100 text-center w-full p-2 rounded-lg hover:bg-gray-200'>Get Otp</button>
 
                         <p className='text-center mt-2'> <Link className='no-underline ' to={'/login'}>Back To Login</Link></p>

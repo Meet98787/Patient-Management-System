@@ -10,59 +10,54 @@ const Login = () => {
     };
 
     return (
-        <div className="p-4">
-            <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
-
-                {/* Form Section */}
-                <div className="bg-white shadow-md rounded-lg p-8 w-full md:w-1/3"> {/* Updated width */}
-                    <h2 className="text-2xl font-bold text-gray-800 mb-6">Login</h2>
-                    <form className="space-y-4">
-                    <label>Email or Phone <span className='text-red-700'>*</span></label>
-                    <input 
-                        type="text" 
-                        placeholder="Enter Email or Phone Number" 
-                        className="w-full border rounded px-4 py-2" 
-                    />
-                    <div className="relative">
-                        <label>Password <span className='text-red-700'>*</span></label>
-                        <input
-                            type={showPassword ? 'text' : 'password'}
-                            placeholder="Enter Password"
-                            className="w-full border rounded px-4 py-2"
-                        />
-                        <span
-                            className="absolute inset-y-0 right-3 flex items-center cursor-pointer mt-3"
-                            onClick={togglePasswordVisibility}
-                        >
-                            {showPassword ? <FaEyeSlash /> : <FaEye />}
-                        </span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-2">
-                            <input type="checkbox" className="border rounded" />
-                            <span className="text-sm">Remember Me</span>
+        <div >
+            <div className="flex flex-col md:flex-row h-screen">
+                {/* Login Form */}
+                <div className="w-full md:w-1/2 flex justify-center items-center p-4">
+                    <form action="" className='shadow-lg rounded-lg p-10 w-full max-w-md'>
+                        <h2 className="text-2xl font-bold mb-6">Login</h2>
+                        <div className="mb-4">
+                            <label htmlFor="registerEmail" className="block text-sm font-medium">Email address</label>
+                            <input type="email" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="registerEmail" placeholder="Enter your email" />
                         </div>
-                        <Link to={'/forgot-password'} className="text-blue-500 text-sm">Forgot Password ?</Link>
-                    </div>
-                    <button className="w-full bg-blue-500 text-white py-2 rounded">Login</button>
-                </form>
-                    <p className="text-center text-sm mt-4">Don't have an account? <Link to={'/'} className="text-blue-500">Register</Link></p>
+                        <div className="mb-4">
+                            <label htmlFor="registerPassword" className="block text-sm font-medium">Password</label>
+                            <input type="password" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="registerPassword" placeholder="Enter your password" />
+                        </div>
+                        <button type="submit" className='bg-gray-100 text-center w-full p-2 rounded-lg hover:bg-gray-200'>Login</button>
+
+                        <div className="flex items-center justify-between mb-4 mt-2">
+                            <div>
+                                <input type="checkbox" id="rememberMe" className="mr-2 leading-tight" />
+                                <label htmlFor="rememberMe" className="text-sm font-medium">Remember Me</label>
+                            </div>
+
+                            <Link to={'/forgot-password'} className="text-sm text-blue-600 hover:underline no-underline">Forgot Password?</Link>
+
+                        </div>
+
+                        <p className='text-center mt-2'>Don't have an account ? <Link className='no-underline' to={'/'}>Registration</Link></p>
+
+
+
+                    </form>
                 </div>
 
                 {/* Image Section */}
-                <div className="flex flex-col items-center justify-center w-full md:w-1/2">
-                    <img src="./image/Group 1000005871.png" alt="Small Illustration" className="mb-4 w-1/3 mx-auto md:w-2/5" />
-                    <img src="./image/Group 1116603022.png" alt="Large Illustration" className="mb-4 w-3/4 mx-auto md:w-4/5" />
-                    <div className="text-center">
-                        <h2 className="text-3xl font-bold text-gray-800">Hospital</h2>
-                        <p className="text-gray-600">
-                            You can stay connected with <br />
-                            your hospital and contact with your facility.
-                        </p>
+                <div className="hidden md:flex justify-center items-center w-full md:w-1/2 bg-gray-100 p-0 relative">
+                    {/* Hide images on small screens */}
+                    <img src="./image/Vector 2.png" alt="" className='absolute top-0 left-0 hidden md:block' />
+                    <img src="./image/Vector 1.png" alt="" className='absolute bottom-0 right-0 hidden md:block' />
+
+                    <div className="flex justify-center items-center flex-col absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <img src="./image/Group 1000005871.png" alt="" className='w-60 mb-2 mt-60' />
+                        <img src="./image/Group 1116603022.png" alt="" className='mb-2 max-w-2xl' />
+                        <h1 className='text-center text-xl font-semibold'>Hospital</h1>
+                        <p className='text-center'>You can stay in the hospital and contact<br /> with your facility</p>
                     </div>
                 </div>
-
             </div>
+
         </div>
     )
 }

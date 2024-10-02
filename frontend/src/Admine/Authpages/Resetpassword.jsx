@@ -84,4 +84,4 @@ const AdminResetpassword = () => {
     )
 }
 
-export default AdminResetpassword
+export default AdminResetpassword;
