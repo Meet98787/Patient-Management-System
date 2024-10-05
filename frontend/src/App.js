@@ -17,6 +17,11 @@ import TestReport from './patient/Dashboard/TestReport';
 import MedicalHistory from './patient/Dashboard/MedicalHistory';
 import Allappoiment from './patient/Dashboard/Allappoiment';
 
+import Appointment from './patient/Dashboard/AppoinmentBooking/Appointment';
+import AppointmentBooking from './patient/Dashboard/AppoinmentBooking/AppointmentBooking';
+import AppointmentTimeSlot from './patient/Dashboard/AppoinmentBooking/AppointmentTimeSlot';
+
+
 
 function App() {
   return (
@@ -28,13 +33,17 @@ function App() {
            <Route path='/otp' element={<Otp/>}></Route>
            <Route path='/reset-password' element={<Resetpassword/>}></Route>
 
+            {/* patient Dashboard */}
            <Route path='/personal-health-record' element={<PersonalHealthRecord/>}></Route>
            <Route path='/profile-setting' element={<ProfileSetting/>}></Route>
            <Route path='/prescriptions' element={<Prescriptions/>}></Route>
            <Route path='/test-report' element={<TestReport/>}></Route>
            <Route path='/medical-history' element={<MedicalHistory/>}></Route>
            <Route path='/medical-history/allappoiment' element={<Allappoiment/>}></Route>
-
+           <Route path='/appointment' element={<Appointment/>}></Route>
+           <Route path='/appointment-booking' element={<AppointmentBooking/>}></Route>
+           <Route path='/appointmenttime' element={<AppointmentTimeSlot/>}></Route>
+           
 
          </Routes>
      </BrowserRouter>
